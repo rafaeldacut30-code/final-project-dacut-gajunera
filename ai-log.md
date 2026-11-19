@@ -89,3 +89,11 @@ User Story 5 (Pet Growth): As a student, I want to see my virtual pet grow or le
 - **What I changed or rejected, and why:** I selected US2, US3, and US5 for my project scope and rejected emotional phrasing (like "so that I feel rewarded") because I wanted strictly technical, system-focused writing.
 - **How I tested it:** Reviewed the finalized User Story 2 against its four acceptance criteria (visibility, immediate navigation, ready-to-practice state, and empty-state check) to confirm they are specific and testable before coding.
 - **What I learned:** User stories should focus on one clear action at a time, and technical acceptance criteria help define exact frontend behaviors (like `localStorage` updates and page redirects) without needing a backend database.
+
+## Entry 3: November 19, 2026
+- **User story:** US3 (Taking the Quiz & Immediate Feedback)
+- **What I asked:** I asked the AI to write technical acceptance criteria for User Story 3, help narrow them down to the top 2 criteria, and remove score tracking so it strictly matches what my user story describes.
+- **What the AI suggested:** The AI initially generated 5 acceptance criteria covering rendering, validation, visual feedback, score tracking, and mobile accessibility, then narrowed them down to 2 focused criteria covering answer lockout and immediate right/wrong feedback.
+- **What I changed or rejected, and why:** I rejected the score-incrementing requirement in the first criterion because User Story 3 only specifies checking answers and getting feedback to learn from mistakes, not keeping a numerical score.
+- **How I tested it:** Checked both final acceptance criteria against User Story 3 to verify that every behavior (selecting an option, locking buttons, highlighting right/wrong answers, and showing an explanation) directly matches the story without adding extra features.
+- **What I learned:** Acceptance criteria should strictly match what is promised in the user story—avoiding extra features like score counters keeps the code scope smaller and easier to test.
