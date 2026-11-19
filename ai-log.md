@@ -97,3 +97,11 @@ User Story 5 (Pet Growth): As a student, I want to see my virtual pet grow or le
 - **What I changed or rejected, and why:** I rejected the score-incrementing requirement in the first criterion because User Story 3 only specifies checking answers and getting feedback to learn from mistakes, not keeping a numerical score.
 - **How I tested it:** Checked both final acceptance criteria against User Story 3 to verify that every behavior (selecting an option, locking buttons, highlighting right/wrong answers, and showing an explanation) directly matches the story without adding extra features.
 - **What I learned:** Acceptance criteria should strictly match what is promised in the user story—avoiding extra features like score counters keeps the code scope smaller and easier to test.
+
+## Entry 4: November 19, 2026
+- **User story:** US5 (Virtual Pet Level & Display Image Progression)
+- **What I asked:** I asked the AI to write 2 technical acceptance criteria for User Story 5, and then revise them to include EXP points gained from answering quizzes without changing the wording of my original user story.
+- **What the AI suggested:** The AI first drafted 2 acceptance criteria based solely on study streaks, suggested rewriting User Story 5 to mention EXP, and then revised the 2 criteria to connect quiz EXP points and study streaks to `petLevel` and dashboard rendering while keeping the original story intact.
+- **What I changed or rejected, and why:** I rejected rewriting User Story 5 because I wanted to keep my finalized story wording unchanged, while ensuring the acceptance criteria still specify that EXP earned from quizzes drives the pet's level and dashboard image.
+- **How I tested it:** Checked both acceptance criteria against User Story 5 to verify that `localStorage` tracks EXP, streak, and `petLevel`, and that `index.html` dynamically updates the pet `<img>` and level text based on those saved values.
+- **What I learned:** Acceptance criteria can specify the exact technical mechanics (like calculating `petLevel` from quiz EXP and study streaks in `localStorage`) without needing to rewrite the high-level user story.
