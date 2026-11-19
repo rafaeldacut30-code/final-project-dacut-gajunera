@@ -42,8 +42,8 @@ Minimum of 5 meaningful AI logs.
 -->
 
 ## Entry 1: [11-19-26]
-- User story:
-- What I asked:I am writing a user story for my web application project called "PomoGochi". a web-based quiz application that uses an interactive virtual pet to motivate students and regular quiz takers to study consistently.
+- **User story:**
+- **What I asked:** I am writing a user story for my web application project called "PomoGochi". a web-based quiz application that uses an interactive virtual pet to motivate students and regular quiz takers to study consistently.
 
 Your task is to help me improve and fix my user stories using the formula: "As a [type of user], I want [some goal], so that [some reason or benefit]."
 
@@ -62,7 +62,7 @@ User story 3
 As a student I can see my quiz results and progress and also my virtual pet progress 
 
 
-- What the AI suggested:
+- **What the AI suggested:**
 Feature: Dashboard
 
 User Story 1 (Pet View): As a student, I want to view my virtual pet and its current mood on the dashboard, so that I feel motivated to start studying.
@@ -78,6 +78,14 @@ Feature: Virtual Pet Streak & Progress
 User Story 4 (Quiz Progress): As a student, I want to view my past quiz scores and study streak, so that I can track my improvement over time.
 
 User Story 5 (Pet Growth): As a student, I want to see my virtual pet grow or level up based on my study streak, so that I feel rewarded for studying consistently.
-- **What I changed or rejected, and why: we picked the user story 2 for the dashboard, user story 3 for quiz page, then user story 5 Virtual Pet Streak & Progress. but i rejected the user story 5 because it suggested feelings, and we dont wanna use that so we changed it into "As a student, I want my virtual pet's level and display image to automatically update when my study streak increases, so that my current progress is accurately reflected on the dashboard."
-- How I tested it:we read and analyzed the suggestions and identify the ai slopped suggestions which we reject and change.
-- What I learned: always read the ai outputs because ai will not always give perfect answers.
+- **What I changed or rejected, and why:** we picked the user story 2 for the dashboard, user story 3 for quiz page, then user story 5 Virtual Pet Streak & Progress. but i rejected the user story 5 because it suggested feelings, and we dont wanna use that so we changed it into "As a student, I want my virtual pet's level and display image to automatically update when my study streak increases, so that my current progress is accurately reflected on the dashboard."
+- **How I tested it:** we read and analyzed the suggestions and identify the ai slopped suggestions which we reject and change.
+- **What I learned:** always read the ai outputs because ai will not always give perfect answers.
+
+## Entry 2: November 19, 2026
+- **User story:** US2 (Start Quiz from Dashboard), US3 (Quiz Page), and US5 (Virtual Pet Streak & Progress)
+- **What I asked:** I asked for help fixing my draft user stories for PomoGochi, clarifying whether the features need a backend/database, and writing technical acceptance criteria for User Story 2.
+- **What the AI suggested:** The AI split my combined drafts into 5 single-action user stories using the standard format, confirmed the app can run entirely on the frontend using JavaScript arrays and `localStorage`, and generated technical acceptance criteria for starting a quiz.
+- **What I changed or rejected, and why:** I selected US2, US3, and US5 for my project scope and rejected emotional phrasing (like "so that I feel rewarded") because I wanted strictly technical, system-focused writing.
+- **How I tested it:** Reviewed the finalized User Story 2 against its four acceptance criteria (visibility, immediate navigation, ready-to-practice state, and empty-state check) to confirm they are specific and testable before coding.
+- **What I learned:** User stories should focus on one clear action at a time, and technical acceptance criteria help define exact frontend behaviors (like `localStorage` updates and page redirects) without needing a backend database.

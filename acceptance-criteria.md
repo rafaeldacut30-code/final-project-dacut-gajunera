@@ -21,7 +21,7 @@ AC - Acceptance Criteria
 
 ## US1:Quiz Navigation
  As a student, I want to easily find and click a button to start a quiz from the dashboard, so that I can begin practicing right away.
-- AC1.1:
+- AC1.1: Visibility & Accessibility: A primary "Start Quiz" button (or styled link) is clearly visible on index.html without scrolling on both desktop and phone-sized screens, using semantic HTML (<button> or <a>) with readable contrast and clear label text.
 - AC1.2:
 
 ## US2: As a student, I want to answer multiple-choice academic questions and get immediate feedback, so that I can test my knowledge and learn from my mistakes.
