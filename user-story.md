@@ -25,5 +25,6 @@ US2:
 As a student, I want to answer multiple-choice academic questions and get immediate feedback, so that I can test my knowledge and learn from my mistakes.
 Feature: Virtual Pet Streak & Progress
 
+ Feature: Virtual Pet Streak & Progress
 US3:
 As a student, I want my virtual pet's level and display image to automatically update when my study streak increases, so that my current progress is accurately reflected on the dashboard.

@@ -24,10 +24,12 @@ AC - Acceptance Criteria
 - AC1.1: Visibility & Accessibility: A primary "Start Quiz" button (or styled link) is clearly visible on index.html without scrolling on both desktop and phone-sized screens, using semantic HTML (<button> or <a>) with readable contrast and clear label text.
 - AC1.2: Ready to Practice: As soon as quiz.html loads, the first question and its answer options are automatically displayed on the screen so the user can start answering right away.
 
-## US2: As a student, I want to answer multiple-choice academic questions and get immediate feedback, so that I can test my knowledge and learn from my mistakes.
+## US2: Quiz Page
+As a student, I want to answer multiple-choice academic questions and get immediate feedback, so that I can test my knowledge and learn from my mistakes.
 - AC2.1: As a student, I want to answer multiple-choice academic questions and get immediate feedback, so that I can test my knowledge and learn from my mistakes.
 - AC2.2: Immediate Visual & Text Feedback: Immediately upon selection, the UI highlights the chosen button as correct (green) or incorrect (red), highlights the right answer if the user missed it, and displays a brief explanation before allowing the user to click "Next."
 
-## US3:As a student, I want my virtual pet's level and display image to automatically update when my study streak increases, so that my current progress is accurately reflected on the dashboard.
+## US3: Virtual Pet Streak & Progress
+As a student, I want my virtual pet's level and display image to automatically update when my study streak increases, so that my current progress is accurately reflected on the dashboard.
 - AC3.1: EXP & Streak-Based Level Calculation: Answering quizzes adds earned EXP points to localStorage, and as total EXP and the study streak reach defined milestones, JavaScript automatically calculates and updates the saved petLevel value.
 - AC3.2: Dynamic Dashboard Rendering: When index.html loads, JavaScript reads the updated petLevel (and corresponding EXP/streak) from localStorage and automatically renders the matching virtual pet <img> (with descriptive alt text) and level text on the dashboard.
