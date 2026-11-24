@@ -123,3 +123,8 @@ User Story 5 (Pet Growth): As a student, I want to see my virtual pet grow or le
 - **What I asked AI for:** Help building the HTML structure for `app.html` so clicking `+ Answer Quiz` from `index.html` immediately displays the first question and answer options.
 - **What AI provided:** A clean HTML page (`app.html`) reusing the `.navbar` and `.main-frame` classes from `styles.css`, with `#question-counter`, `#question-text`, `#choices-container`, and `#quiz-feedback` containers connected to `script.js`.
 - **What I verified/changed:** Saved `app.html`, opened `index.html` in the browser, clicked `+ Answer Quiz`, and confirmed Question 1 and all 4 choice buttons loaded automatically on screen without errors (passing AC1.1 and AC1.2).
+
+### Entry 8: — Created `script.js` (US1 / AC1.1 & AC1.2) Date: November 24, 2026 
+- **What I asked AI for:** Help structuring and writing `script.js` in clear, beginner-friendly sections so it handles `localStorage` data, tab switching on `index.html`, and automatic question display on `app.html`.
+- **What AI provided:** A 4-part `script.js` with `defaultPetData` and `quizQuestions` at the top, `getPetData()`, `renderDashboard()`, and `setupNavigation()` with page guards for `index.html`, `loadQuestion()` for `app.html`, and a single `DOMContentLoaded` startup listener.
+- **What I verified/changed:** Reviewed every section of `script.js`, tested tab switching across Progress, Dashboard, and Quiz Streak on `index.html`, and confirmed Question 1 and all 4 choices load automatically on `app.html` with zero console errors.
