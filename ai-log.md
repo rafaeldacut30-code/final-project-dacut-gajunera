@@ -118,3 +118,8 @@ User Story 5 (Pet Growth): As a student, I want to see my virtual pet grow or le
 - **Prompt / Goal:** Style `index.html` to match our low-fidelity wireframes with a centered top navigation bar, left-aligned brand logo, boxed streak/progress badges, circular `+ Answer Quiz` button, and mobile-friendly responsiveness.
 - **AI Output Used:** Generated CSS layout rules using a 3-column CSS Grid (`grid-template-columns: 1fr auto 1fr`) for `.navbar`, Flexbox alignment for the pet display and stat badges, `.hidden` view toggling, and a `@media (max-width: 650px)` breakpoint for smaller screens.
 - **What We Verified / Changed:** Removed unused `.user-info` styles to fit the guest-only design, centered the navigation tabs in the header, and tested desktop and mobile widths in the browser to confirm zero horizontal overflow.
+
+### Entry 7: — Created app.html (US1 / AC1.2) Date: November 24, 2026
+- **What I asked AI for:** Help building the HTML structure for `app.html` so clicking `+ Answer Quiz` from `index.html` immediately displays the first question and answer options.
+- **What AI provided:** A clean HTML page (`app.html`) reusing the `.navbar` and `.main-frame` classes from `styles.css`, with `#question-counter`, `#question-text`, `#choices-container`, and `#quiz-feedback` containers connected to `script.js`.
+- **What I verified/changed:** Saved `app.html`, opened `index.html` in the browser, clicked `+ Answer Quiz`, and confirmed Question 1 and all 4 choice buttons loaded automatically on screen without errors (passing AC1.1 and AC1.2).
