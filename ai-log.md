@@ -105,3 +105,9 @@ User Story 5 (Pet Growth): As a student, I want to see my virtual pet grow or le
 - **What I changed or rejected, and why:** I rejected rewriting User Story 5 because I wanted to keep my finalized story wording unchanged, while ensuring the acceptance criteria still specify that EXP earned from quizzes drives the pet's level and dashboard image.
 - **How I tested it:** Checked both acceptance criteria against User Story 5 to verify that `localStorage` tracks EXP, streak, and `petLevel`, and that `index.html` dynamically updates the pet `<img>` and level text based on those saved values.
 - **What I learned:** Acceptance criteria can specify the exact technical mechanics (like calculating `petLevel` from quiz EXP and study streaks in `localStorage`) without needing to rewrite the high-level user story.
+
+## Entry 5: Dashboard & Navigation Structure (`index.html`) Date: November 23, 2026
+- **User Story:** US1 – Quiz Navigation & Dashboard Views
+- **Prompt / Goal:** Build a guest-only dashboard in `index.html` with a top navigation bar (logo on the left; Progress, Dashboard, and Quiz Streak tabs in the center), a central virtual pet display, a `+ Answer Quiz` link to `app.html`, and toggleable sections for Streak and Progress stats without requiring user accounts.
+- **AI Output Used:** Generated semantic HTML5 structure (`<header>`, `<nav>`, `<main>`, `<section>`) with `data-view` attributes for tab switching and accessible `aria-label` attributes.
+- **What We Verified / Changed:** Removed the top-right account/login placeholder to keep the app guest-only via `localStorage`, added the pet's current level display to the Quiz Streak view, and tested the layout and navigation buttons in the browser.
