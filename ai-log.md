@@ -111,3 +111,10 @@ User Story 5 (Pet Growth): As a student, I want to see my virtual pet grow or le
 - **Prompt / Goal:** Build a guest-only dashboard in `index.html` with a top navigation bar (logo on the left; Progress, Dashboard, and Quiz Streak tabs in the center), a central virtual pet display, a `+ Answer Quiz` link to `app.html`, and toggleable sections for Streak and Progress stats without requiring user accounts.
 - **AI Output Used:** Generated semantic HTML5 structure (`<header>`, `<nav>`, `<main>`, `<section>`) with `data-view` attributes for tab switching and accessible `aria-label` attributes.
 - **What We Verified / Changed:** Removed the top-right account/login placeholder to keep the app guest-only via `localStorage`, added the pet's current level display to the Quiz Streak view, and tested the layout and navigation buttons in the browser.
+
+## Entry 6: Responsive Dashboard & Centered Navbar Styling (`styles.css`) Date: November 23, 2026
+- **Date:** November 24, 2026
+- **User Story:** US1 – Quiz Navigation & Dashboard Views
+- **Prompt / Goal:** Style `index.html` to match our low-fidelity wireframes with a centered top navigation bar, left-aligned brand logo, boxed streak/progress badges, circular `+ Answer Quiz` button, and mobile-friendly responsiveness.
+- **AI Output Used:** Generated CSS layout rules using a 3-column CSS Grid (`grid-template-columns: 1fr auto 1fr`) for `.navbar`, Flexbox alignment for the pet display and stat badges, `.hidden` view toggling, and a `@media (max-width: 650px)` breakpoint for smaller screens.
+- **What We Verified / Changed:** Removed unused `.user-info` styles to fit the guest-only design, centered the navigation tabs in the header, and tested desktop and mobile widths in the browser to confirm zero horizontal overflow.
