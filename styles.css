@@ -291,3 +291,37 @@ body {
   margin-bottom: 0.6rem;
   animation: petIdle 2.6s ease-in-out infinite;
 }
+
+/* Interactive Pet Speech Bubble & Click Bounce */
+.pet-img {
+  cursor: pointer;
+}
+
+.pet-speech {
+  background-color: #fef3c7;
+  color: #78350f;
+  border: 2px solid #f59e0b;
+  border-radius: 14px;
+  padding: 0.45rem 0.9rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+@keyframes petBounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  35% {
+    transform: translateY(-18px) scale(1.1);
+  }
+  70% {
+    transform: translateY(-4px) scale(0.98);
+  }
+}
+
+.pet-bounce {
+  animation: petBounce 0.55s ease;
+}

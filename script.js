@@ -11,6 +11,11 @@ const petStages = [
     level: 1,
     name: "Pawmi",
     alt: "Stage 1 Pawmi electric mouse virtual pet",
+    quotes: [
+      "Pawmi! Let's take a quiz to earn EXP!",
+      "Zzzzt! A daily study streak helps me evolve!",
+      "Paw-paw! You've got this—keep studying!"
+    ],
     image: "data:image/svg+xml;utf8," + encodeURIComponent(`
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
         <ellipse cx="44" cy="36" rx="14" ry="24" transform="rotate(-20 44 36)" fill="#f97316" stroke="#7c2d12" stroke-width="3"/>
@@ -35,6 +40,11 @@ const petStages = [
     level: 2,
     name: "Pawmo",
     alt: "Stage 2 Pawmo evolved electric virtual pet",
+    quotes: [
+      "Pawmo! Standing tall thanks to your study streak!",
+      "Bzzzt! One more quiz gets us closer to Pawmot!",
+      "Keep going! Your focus is super effective!"
+    ],
     image: "data:image/svg+xml;utf8," + encodeURIComponent(`
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
         <ellipse cx="42" cy="30" rx="14" ry="26" transform="rotate(-18 42 30)" fill="#f97316" stroke="#7c2d12" stroke-width="3"/>
@@ -59,6 +69,11 @@ const petStages = [
     level: 3,
     name: "Pawmot",
     alt: "Stage 3 Pawmot final evolution electric virtual pet",
+    quotes: [
+      "Pawmot! Maximum study power unlocked!",
+      "⚡ Full charge! Ready to ace any quiz!",
+      "Unstoppable streak! Let's keep leveling up!"
+    ],
     image: "data:image/svg+xml;utf8," + encodeURIComponent(`
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
         <polygon points="18,44 26,34 22,48 32,42 20,58" fill="#facc15"/>
@@ -104,7 +119,7 @@ const quizQuestions = [
   }
 ];
 
-// 2. INDEX.HTML: EXP/Streak Level Calculation (AC3.1) & Dynamic Dashboard Rendering (AC3.2)
+// 2. INDEX.HTML: Level calculation (AC3.1), Dynamic Dashboard (AC3.2), & Interactive Pet
 function getPetData() {
   const saved = localStorage.getItem("pomogochiData");
   return saved ? JSON.parse(saved) : { ...defaultPetData };
@@ -145,6 +160,40 @@ function renderDashboard() {
   document.getElementById("pet-level").textContent = pet.level;
   document.getElementById("pet-exp").textContent = pet.exp;
   document.getElementById("total-score").textContent = pet.totalScore;
+}
+
+let speechTimeout;
+
+function setupPetInteraction() {
+  const petImg = document.getElementById("pet-image");
+  const speechBubble = document.getElementById("pet-speech");
+  if (!petImg || !speechBubble) return;
+
+  petImg.title = "Click to cheer on your PomoGochi!";
+
+  petImg.addEventListener("click", () => {
+    const pet = getPetData();
+    const stage = getCurrentStage(pet.level);
+    const randomQuote = stage.quotes[Math.floor(Math.random() * stage.quotes.length)];
+
+    // Restart the bounce animation cleanly on every click
+    petImg.classList.remove("pet-bounce");
+    void petImg.offsetWidth;
+    petImg.classList.add("pet-bounce");
+
+    // Show speech bubble and hide after 2.4 seconds
+    speechBubble.textContent = randomQuote;
+    speechBubble.classList.remove("hidden");
+
+    clearTimeout(speechTimeout);
+    speechTimeout = setTimeout(() => {
+      speechBubble.classList.add("hidden");
+    }, 2400);
+  });
+
+  petImg.addEventListener("animationend", () => {
+    petImg.classList.remove("pet-bounce");
+  });
 }
 
 function setupNavigation() {
@@ -249,6 +298,7 @@ function setupNextButton() {
 // 4. STARTUP: Run automatically when either page finishes loading
 document.addEventListener("DOMContentLoaded", () => {
   renderDashboard();
+  setupPetInteraction();
   setupNavigation();
   loadQuestion();
   setupNextButton();
