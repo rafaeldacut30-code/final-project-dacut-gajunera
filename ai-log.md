@@ -128,3 +128,8 @@ User Story 5 (Pet Growth): As a student, I want to see my virtual pet grow or le
 - **What I asked AI for:** Help structuring and writing `script.js` in clear, beginner-friendly sections so it handles `localStorage` data, tab switching on `index.html`, and automatic question display on `app.html`.
 - **What AI provided:** A 4-part `script.js` with `defaultPetData` and `quizQuestions` at the top, `getPetData()`, `renderDashboard()`, and `setupNavigation()` with page guards for `index.html`, `loadQuestion()` for `app.html`, and a single `DOMContentLoaded` startup listener.
 - **What I verified/changed:** Reviewed every section of `script.js`, tested tab switching across Progress, Dashboard, and Quiz Streak on `index.html`, and confirmed Question 1 and all 4 choices load automatically on `app.html` with zero console errors.
+
+### Entry 9: — Interactive Quiz Feedback & Next Button (US2 / AC2.1 & AC2.2) Date: November 24, 2026 
+- **What I asked AI for:** Help adding immediate green/red visual feedback, answer explanations, and a styled Next Question button to `app.html`, `styles.css`, and `script.js`.
+- **What AI provided:** Added `explanation` strings to `quizQuestions`, `#next-btn` in `app.html`, `.correct`/`.wrong` and `#next-btn` styles in `styles.css`, and `checkAnswer()` + `setupNextButton()` in `script.js`.
+- **What I verified/changed:** Tested both right and wrong answers on `app.html`, confirmed the clicked choice highlights green or red (while revealing the right answer on misses), verified the explanation text displays before enabling the styled Next Question button, and walked through all 3 questions to completion.
