@@ -1,58 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PomoGochi</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="navbar">
-    <div class="brand">
-      <span class="logo-box" aria-hidden="true">🐲</span>
-      <span class="brand-name">PomoGochi</span>
-    </div>
-    <nav class="nav-links" aria-label="Main Navigation">
-      <button type="button" class="nav-btn" data-view="progress-view">Progress</button>
-      <button type="button" class="nav-btn active" data-view="dashboard-view">Dashboard</button>
-      <button type="button" class="nav-btn" data-view="streak-view">Quiz Streak</button>
-    </nav>
-  </header>
-
-  <main class="main-frame">
-    <!-- Dashboard -->
-    <section id="dashboard-view" class="view active-view">
-      <div class="pet-display" role="img" aria-label="PomoGochi Virtual Pet">🐣</div>
-      <p id="pet-stage-label" class="stage-label">Stage: Baby Chick</p>
-      <a href="app.html" class="quiz-trigger" aria-label="Answer Quiz">
-        <span class="plus-circle">+</span>
-        <span>Answer Quiz</span>
-      </a>
-    </section>
-
-    <!-- Quiz Streak View -->
-    <section id="streak-view" class="view hidden">
-      <div class="pet-display" role="img" aria-label="PomoGochi Virtual Pet">🐣</div>
-      <div class="streak-box">
-        <strong id="streak-count">0</strong>-DAY STREAK
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PomoGochi</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="brand">
+        <span class="logo-box" aria-hidden="true">🐈</span>
+        <span class="brand-name">PomoGochi</span>
       </div>
-      <p class="stage-label">Current Pet Level: <strong id="streak-pet-level">1</strong></p>
-    </section>
+      <nav class="nav-links" aria-label="Main Navigation">
+        <button type="button" class="nav-btn" data-view="progress-view">
+          Progress
+        </button>
+        <button type="button" class="nav-btn active" data-view="dashboard-view">
+          Dashboard
+        </button>
+        <button type="button" class="nav-btn" data-view="streak-view">
+          Quiz Streak
+        </button>
+      </nav>
+    </header>
 
-    <!-- Progress View -->
-    <section id="progress-view" class="view hidden">
-      <div class="progress-header">
-        <div class="pet-avatar-small" role="img" aria-label="Pet Avatar">🐣</div>
-        <h2 id="pet-name">PomoGochi</h2>
-      </div>
-      <div class="stat-badges">
-        <div class="stat-badge">Lvl: <strong id="pet-level">1</strong></div>
-        <div class="stat-badge">Exp: <strong id="pet-exp">0</strong> / 100</div>
-        <div class="stat-badge">Total Score: <strong id="total-score">0</strong></div>
-      </div>
-    </section>
-  </main>
+    <main class="main-frame">
+      <!-- Dashboard -->
+      <section id="dashboard-view" class="view active-view">
+        <div class="pet-display">
+          <img
+            id="pet-image"
+            src=""
+            alt="Stage 1 Pawmi electric mouse virtual pet"
+            class="pet-img"
+          />
+          <p id="pet-stage-label" class="stage-label">Pawmi • Level 1</p>
+        </div>
+        <a href="app.html" class="quiz-trigger" aria-label="Answer Quiz">
+          <span class="plus-circle">+</span>
+          <span>Answer Quiz</span>
+        </a>
+      </section>
 
-  <script src="script.js"></script>
-</body>
-</html> 
+      <!-- Quiz Streak View -->
+      <section id="streak-view" class="view hidden">
+        <div class="pet-display" role="img" aria-label="PomoGochi Virtual Pet">
+          🐈
+        </div>
+        <div class="streak-box">
+          <strong id="streak-count">0</strong>-DAY STREAK
+        </div>
+        <p class="stage-label">
+          Current Pet Level: <strong id="streak-pet-level">1</strong>
+        </p>
+      </section>
+
+      <!-- Progress View -->
+      <section id="progress-view" class="view hidden">
+        <div class="progress-header">
+          <div class="pet-avatar-small" role="img" aria-label="Pet Avatar">
+            🐈
+          </div>
+          <h2 id="pet-name">PomoGochi</h2>
+        </div>
+        <div class="stat-badges">
+          <div class="stat-badge">Lvl: <strong id="pet-level">1</strong></div>
+          <div class="stat-badge">
+            Exp: <strong id="pet-exp">0</strong> / 100
+          </div>
+          <div class="stat-badge">
+            Total Score: <strong id="total-score">0</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

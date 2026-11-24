@@ -266,3 +266,28 @@ body {
 #next-btn:active {
   transform: translateY(0);
 }
+
+/* Virtual Pet Image & Idle Motion (US3 / AC3.2) */
+.pet-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+@keyframes petIdle {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.03);
+  }
+}
+
+.pet-img {
+  width: 145px;
+  height: 145px;
+  object-fit: contain;
+  margin-bottom: 0.6rem;
+  animation: petIdle 2.6s ease-in-out infinite;
+}
