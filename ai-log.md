@@ -133,3 +133,8 @@ User Story 5 (Pet Growth): As a student, I want to see my virtual pet grow or le
 - **What I asked AI for:** Help adding immediate green/red visual feedback, answer explanations, and a styled Next Question button to `app.html`, `styles.css`, and `script.js`.
 - **What AI provided:** Added `explanation` strings to `quizQuestions`, `#next-btn` in `app.html`, `.correct`/`.wrong` and `#next-btn` styles in `styles.css`, and `checkAnswer()` + `setupNextButton()` in `script.js`.
 - **What I verified/changed:** Tested both right and wrong answers on `app.html`, confirmed the clicked choice highlights green or red (while revealing the right answer on misses), verified the explanation text displays before enabling the styled Next Question button, and walked through all 3 questions to completion.
+
+### Entry 10:  — Virtual Pet Streak, EXP Leveling & Evolution (US3 / AC3.1 & AC3.2) Date: November 24, 2026
+- **What I asked AI for:** Help implementing EXP and streak-based level calculation in `localStorage` and dynamically rendering the evolving virtual pet image (Pawmi -> Pawmo -> Pawmot) and level text on `index.html`.
+- **What AI provided:** Added `<img id="pet-image">` and `#pet-stage-label` in `index.html`, idle breathing animation in `styles.css`, and `petStages`, `calculatePetLevel()`, `saveQuizProgress()`, and `renderDashboard()` in `script.js`.
+- **What I verified/changed:** Tested completing quizzes on `app.html`, confirmed EXP and streak persist in `localStorage`, and verified `index.html` automatically updates the pet image, `alt` text, and level from Pawmi (Level 1) to Pawmo (Level 2) and Pawmot (Level 3).

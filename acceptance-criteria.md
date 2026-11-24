@@ -33,3 +33,4 @@ As a student, I want to answer multiple-choice academic questions and get immedi
 As a student, I want my virtual pet's level and display image to automatically update when my study streak increases, so that my current progress is accurately reflected on the dashboard.
 - AC3.1: EXP & Streak-Based Level Calculation: Answering quizzes adds earned EXP points to localStorage, and as total EXP and the study streak reach defined milestones, JavaScript automatically calculates and updates the saved petLevel value.
 - AC3.2: Dynamic Dashboard Rendering: When index.html loads, JavaScript reads the updated petLevel (and corresponding EXP/streak) from localStorage and automatically renders the matching virtual pet <img> (with descriptive alt text) and level text on the dashboard.
+
