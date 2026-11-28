@@ -1,34 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PomoGochi - Quiz</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="navbar">
-      <div class="brand">
-        <span class="logo-box" aria-hidden="true">🐲</span>
-        <span class="brand-name">PomoGochi</span>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PomoGochi - Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">
+      <span id="brand-logo" class="logo-box" aria-hidden="true">⚡</span>
+      <span class="brand-name">PomoGochi</span>
+    </div>
+
+    <nav class="nav-links" aria-label="Quiz Navigation">
+      <a href="index.html" class="nav-btn">← Back to Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="main-frame">
+    <section id="quiz-box" class="quiz-container" aria-live="polite">
+      <div class="quiz-progress-track">
+        <div id="quiz-progress-fill" class="quiz-progress-fill" style="width: 0%;"></div>
       </div>
-      <nav class="nav-links" aria-label="Quiz Navigation">
-        <a href="index.html" class="nav-btn">← Back to Dashboard</a>
-      </nav>
-    </header>
 
-    <main class="main-frame">
-      <section id="quiz-box" class="quiz-box">
-        <p id="question-counter" class="stage-label">Question 1 of 3</p>
-        <h2 id="question-text">Loading question...</h2>
-        <div id="choices-container" class="choices-list"></div>
-        <p id="quiz-feedback" class="stage-label" aria-live="polite"></p>
-        <button id="next-btn" type="button" class="primary-btn hidden">
-          Next Question →
-        </button>
-      </section>
-    </main>
+      <div class="quiz-meta-row">
+        <span id="question-counter" class="question-counter">Question 1 of 5</span>
+        <span id="question-subject-badge" class="subject-tag">Subject</span>
+      </div>
 
-    <script src="script.js"></script>
-  </body>
+      <h1 id="question-text" class="question-text">Loading question...</h1>
+
+      <div id="choices-container" class="choices-grid"></div>
+
+      <div id="feedback-box" class="feedback-box hidden">
+        <p id="feedback-text" class="feedback-title"></p>
+        <p id="explanation-text" class="explanation-text"></p>
+      </div>
+
+      <button type="button" id="next-btn" class="primary-pill-btn hidden">Next Question →</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>

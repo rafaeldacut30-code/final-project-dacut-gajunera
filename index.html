@@ -1,82 +1,156 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PomoGochi</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="navbar">
-      <div class="brand">
-        <span class="logo-box" aria-hidden="true">🐈</span>
-        <span class="brand-name">PomoGochi</span>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PomoGochi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">
+      <span id="brand-logo" class="logo-box" aria-hidden="true">⚡</span>
+      <span class="brand-name">PomoGochi</span>
+    </div>
+
+    <nav class="nav-links" aria-label="Main Navigation">
+      <button type="button" class="nav-btn" data-view="progress-view">Progress</button>
+      <button type="button" class="nav-btn active" data-view="dashboard-view">Dashboard</button>
+      <button type="button" class="nav-btn" data-view="streak-view">Quiz Streak</button>
+    </nav>
+  </header>
+
+  <main class="main-frame">
+    <!-- Dashboard View -->
+    <section id="dashboard-view" class="view habitat-card habitat-meadow active-view">
+      <h1 class="visually-hidden">Dashboard</h1>
+
+      <!-- Pet Selector Bar -->
+      <div class="pet-selector-bar" role="group" aria-label="Choose Your PomoGochi Companion">
+        <button type="button" class="pet-select-btn active" data-pet="pup">
+          <span id="select-icon-pup" class="select-mini-icon">⚡</span>
+          <span>PomoPup</span>
+        </button>
+        <button type="button" class="pet-select-btn" data-pet="ember">
+          <span id="select-icon-ember" class="select-mini-icon">🔥</span>
+          <span>EmberKit</span>
+        </button>
+        <button type="button" class="pet-select-btn" data-pet="volt">
+          <span id="select-icon-volt" class="select-mini-icon">🌩️</span>
+          <span>VoltKit</span>
+        </button>
       </div>
-      <nav class="nav-links" aria-label="Main Navigation">
-        <button type="button" class="nav-btn" data-view="progress-view">
-          Progress
-        </button>
-        <button type="button" class="nav-btn active" data-view="dashboard-view">
-          Dashboard
-        </button>
-        <button type="button" class="nav-btn" data-view="streak-view">
-          Quiz Streak
-        </button>
-      </nav>
-    </header>
 
-    <main class="main-frame">
-      <!-- Dashboard -->
-      <section id="dashboard-view" class="view active-view">
-        <div class="pet-display">
-          <p id="pet-speech" class="pet-speech hidden"></p>
-          <img
-            id="pet-image"
-            src=""
-            alt="Stage 1 Pawmi electric mouse virtual pet"
-            class="pet-img"
-          />
-          <p id="pet-stage-label" class="stage-label">Pawmi • Level 1</p>
+      <div class="pet-stage-wrapper">
+        <div id="dashboard-pet" class="pet-display pet-idle" role="img" aria-label="PomoGochi Virtual Pet"></div>
+        <div class="pet-shadow"></div>
+      </div>
+
+      <p id="pet-stage-label" class="stage-pill">Stage 1: PomoPup</p>
+
+      <!-- Answer Quiz Trigger Button -->
+      <button type="button" id="open-quiz-setup-btn" class="quiz-trigger" aria-expanded="false" aria-controls="quiz-setup-panel">
+        <span class="plus-circle">+</span>
+        <span class="trigger-label-pill">Answer Quiz</span>
+      </button>
+
+      <!-- Subject & Question Limit Picker Panel -->
+      <div id="quiz-setup-panel" class="quiz-setup-panel hidden">
+        <div class="setup-group">
+          <p class="setup-heading">1. Choose Subject</p>
+          <div class="subject-pills" role="group" aria-label="Quiz Subject">
+            <button type="button" class="subject-pill active" data-subject="all">All Subjects (50)</button>
+            <button type="button" class="subject-pill" data-subject="Math">Math (17)</button>
+            <button type="button" class="subject-pill" data-subject="English">English (17)</button>
+            <button type="button" class="subject-pill" data-subject="Programming">Programming (8)</button>
+            <button type="button" class="subject-pill" data-subject="Business Management">Business Mgmt (8)</button>
+          </div>
         </div>
-        <a href="app.html" class="quiz-trigger" aria-label="Answer Quiz">
-          <span class="plus-circle">+</span>
-          <span>Answer Quiz</span>
+
+        <div class="setup-group">
+          <p class="setup-heading">2. Number of Questions</p>
+          <div class="limit-pills" role="group" aria-label="Question Limit">
+            <button type="button" class="limit-pill active" data-limit="5">5</button>
+            <button type="button" class="limit-pill" data-limit="10">10</button>
+            <button type="button" class="limit-pill" data-limit="15">15</button>
+            <button type="button" class="limit-pill" data-limit="20">20</button>
+            <button type="button" class="limit-pill" data-limit="25">25</button>
+            <button type="button" class="limit-pill" data-limit="30">30</button>
+            <button type="button" class="limit-pill" data-limit="35">35</button>
+            <button type="button" class="limit-pill" data-limit="40">40</button>
+            <button type="button" class="limit-pill" data-limit="45">45</button>
+            <button type="button" class="limit-pill" data-limit="all">All</button>
+          </div>
+        </div>
+
+        <a id="start-quiz-link" href="app.html?subject=all&limit=5" class="primary-pill-btn start-quiz-btn">
+          Start Randomized Quiz →
         </a>
-      </section>
+      </div>
+    </section>
 
-      <!-- Quiz Streak View -->
-      <section id="streak-view" class="view hidden">
-        <div class="pet-display" role="img" aria-label="PomoGochi Virtual Pet">
-          🐈
-        </div>
-        <div class="streak-box">
-          <strong id="streak-count">0</strong>-DAY STREAK
-        </div>
-        <p class="stage-label">
-          Current Pet Level: <strong id="streak-pet-level">1</strong>
-        </p>
-      </section>
+    <!-- Quiz Streak View -->
+    <section id="streak-view" class="view habitat-card habitat-meadow hidden">
+      <h2 class="visually-hidden">Quiz Streak</h2>
+      <div class="pet-stage-wrapper">
+        <div id="streak-pet" class="pet-display pet-idle" role="img" aria-label="PomoGochi Virtual Pet"></div>
+        <div class="pet-shadow"></div>
+      </div>
+      <div class="streak-box">
+        🔥 ANSWER QUIZ STREAK: <strong id="streak-count">0</strong>
+      </div>
+      <p class="stage-label habitat-subpill">Current Pet Level: <strong id="streak-pet-level">1</strong></p>
+    </section>
 
-      <!-- Progress View -->
-      <section id="progress-view" class="view hidden">
-        <div class="progress-header">
-          <div class="pet-avatar-small" role="img" aria-label="Pet Avatar">
-            🐈
-          </div>
-          <h2 id="pet-name">PomoGochi</h2>
+    <!-- Progress View -->
+    <section id="progress-view" class="view progress-card hidden">
+      <div class="progress-header">
+        <div id="progress-pet" class="pet-avatar-small" role="img" aria-label="Pet Avatar"></div>
+        <div>
+          <h2 id="pet-name">PomoPup</h2>
+          <p id="progress-stage-text" class="stage-subtext">Stage 1: PomoPup</p>
         </div>
-        <div class="stat-badges">
-          <div class="stat-badge">Lvl: <strong id="pet-level">1</strong></div>
-          <div class="stat-badge">
-            Exp: <strong id="pet-exp">0</strong> / 100
-          </div>
-          <div class="stat-badge">
-            Total Score: <strong id="total-score">0</strong>
-          </div>
-        </div>
-      </section>
-    </main>
+      </div>
 
-    <script src="script.js"></script>
-  </body>
+      <div class="stat-badges">
+        <div class="stat-badge badge-gold">
+          🏆 Lvl: <strong id="pet-level">1</strong>
+        </div>
+        <div class="stat-badge badge-blue">
+          ⚡ Exp: <strong id="pet-exp">0</strong> / 100
+          <div class="exp-bar-track">
+            <div id="exp-bar-fill" class="exp-bar-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+        <div class="stat-badge badge-green">
+          ⭐ Total Score: <strong id="total-score">0</strong>
+        </div>
+      </div>
+
+      <!-- Dynamic Evolution Roadmap -->
+      <div class="evolution-section">
+        <h3 class="evo-title">Evolution Forms</h3>
+        <div class="evo-cards">
+          <div id="evo-stage-1" class="evo-card unlocked">
+            <div id="evo-icon-1" class="evo-mini-pet"></div>
+            <span id="evo-name-1" class="evo-name">PomoPup</span>
+            <span class="evo-req">Lv 1</span>
+          </div>
+          <div id="evo-stage-2" class="evo-card">
+            <div id="evo-icon-2" class="evo-mini-pet"></div>
+            <span id="evo-name-2" class="evo-name">PomoPaw</span>
+            <span class="evo-req">Lv 3</span>
+          </div>
+          <div id="evo-stage-3" class="evo-card">
+            <div id="evo-icon-3" class="evo-mini-pet"></div>
+            <span id="evo-name-3" class="evo-name">PomoChamp</span>
+            <span class="evo-req">Lv 5</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
