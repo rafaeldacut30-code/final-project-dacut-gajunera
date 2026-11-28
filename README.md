@@ -1,31 +1,29 @@
-# [App Name]
-<!-- About your app: what does your app do? Example: "Today's carinderia menu and orders, without paper." -->
+# PomoGochi
+Gamified study quizzes powered by a virtual pet companion that levels up and evolves as you learn.
 
 ## Problem
-<!-- 1–2 sentences in bulleted form. Keep it direct. What everyday problem does your app solve? Who has this problem, and where?
-Example: Carinderia owners in Manolo Fortich write orders on paper and lose track during lunch rush. -->
+- Students reviewing for exams often lose motivation when practicing with plain, static flashcards or worksheets.
+- Many learners want a quick way to test themselves across core subjects without creating an account or setting up complicated study tools.
 
 ## Target Users
-<!-- List 1–2 types of people who will use your app. Be specific.
-Example: Carinderia owners; customers ordering for pickup -->
+- Students who wants to learn randomize things and concepts.
+- Self-paced learners who want quick, bite-sized practice quizzes with immediate feedback.
 
 ## Solution
-<!-- Add your solution -->
+PomoGochi turns self-quizzing into a simple browser-based virtual pet game. Users pick a companion (**PomoPup**, **EmberKit**, or **VoltKit**), choose a subject and question count, and answer randomized multiple-choice questions to earn EXP, level up their pet across three evolution stages, and build their quiz streak—all saved automatically in `localStorage` with zero sign-up required.
 
 ## Main Feature
-<!-- The ONE thing your app must do. If you removed everything else, what's left?
-Example: Customers view today's menu; the owner adds and tracks orders. -->
+Students answer randomized subject quizzes to earn EXP and evolve their virtual pet companion across three growth stages.
 
 ## Pages
-<!-- List 3–5 pages and one line on what each page shows. Homepage and App page are required. -->
-- Homepage:
-- App page:
-- Cart or Subscription page:
-- 
+- **Homepage (`index.html` — Dashboard View):** Lets users switch between three pet companions, view their pet's current evolution stage in its animated habitat, and configure a quiz by subject and question count.
+- **App page (`app.html` — Quiz Runner):** Displays randomized multiple-choice questions with shuffled answer options, a live progress bar, instant answer explanations, and a post-quiz EXP and score summary.
+- **Progress View (`index.html#progress-view`):** Shows the pet's current level, EXP progress bar, total quiz score, and a 3-stage evolution roadmap (unlocking at Levels 1, 3, and 5).
+- **Quiz Streak View (`index.html#streak-view`):** Tracks the user's consecutive completed quiz streak alongside their active companion.
 
 ## Team
-<!-- Name – role. Example: Juan Dela Cruz – Developer -->
-- 
+- Rafael Dacut – Developer
+- Andre Gajunera – Designer
 
 ## Live Link
-<!-- Add your GitHub Pages link once deployed. -->
+https://rafaeldacut30-code.github.io/final-project-dacut-gajunera/
