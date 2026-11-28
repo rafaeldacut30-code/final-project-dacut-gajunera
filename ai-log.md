@@ -138,3 +138,8 @@ User Story 5 (Pet Growth): As a student, I want to see my virtual pet grow or le
 - **What I asked AI for:** Help implementing EXP and streak-based level calculation in `localStorage` and dynamically rendering the evolving virtual pet image (Pawmi -> Pawmo -> Pawmot) and level text on `index.html`.
 - **What AI provided:** Added `<img id="pet-image">` and `#pet-stage-label` in `index.html`, idle breathing animation in `styles.css`, and `petStages`, `calculatePetLevel()`, `saveQuizProgress()`, and `renderDashboard()` in `script.js`.
 - **What I verified/changed:** Tested completing quizzes on `app.html`, confirmed EXP and streak persist in `localStorage`, and verified `index.html` automatically updates the pet image, `alt` text, and level from Pawmi (Level 1) to Pawmo (Level 2) and Pawmot (Level 3).
+
+## Final Update: UI Polish, Guest Mode & GitHub Pages Sync
+* **Goal:** Simplify the user flow to guest-only access, center the top navigation bar, restore the full-screen habitat backgrounds, and sync the final code to GitHub Pages.
+* **AI Guidance Used:** Used Gemini as a pair programmer to remove login/logout controls from `index.html`, `app.html`, and `script.js`, fix CSS grid centering and full-viewport backgrounds in `styles.css`, and resolve a nested Git folder issue in `Final Project-Elective 1`.
+* **What I Tested & Verified:** Checked that all three pets (**PomoPup**, **EmberKit**, **VoltKit**), their evolution stages, and quiz scores still save in `localStorage` across refreshes, and confirmed the live GitHub Pages site renders properly.
